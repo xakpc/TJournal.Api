@@ -37,18 +37,28 @@
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
     <None Include="app.config" />
+    <None Include="Model\Model.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiFactory.cs" />
     <Compile Include="DAL\BaseService.cs" />
     <Compile Include="DAL\AccountService.cs" />
+    <Compile Include="DAL\PaperService.cs" />
     <Compile Include="IAccountService.cs" />
+    <Compile Include="IClubService.cs" />
+    <Compile Include="IPaperService.cs" />
     <Compile Include="Model\AccountInfo.cs" />
     <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\BasePaper.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\ClubPaper.cs" />
     <Compile Include="Model\Error.cs" />
     <Compile Include="Model\Likes.cs" />
+    <Compile Include="Model\Medium.cs" />
+    <Compile Include="Model\Paper.cs" />
+    <Compile Include="Model\PaperAuthor.cs" />
+    <Compile Include="Model\PaperCategory.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\Rating.cs" />
     <Compile Include="Model\SocialAccount.cs" />

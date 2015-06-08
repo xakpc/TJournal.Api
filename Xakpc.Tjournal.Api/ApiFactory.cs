@@ -8,5 +8,10 @@ namespace Xakpc.Tjournal.Api
         {
             return new AccountService();
         }
+
+        public static IPaperService GetPaperService()
+        {
+            return new PaperService();
+        }
     }
 }

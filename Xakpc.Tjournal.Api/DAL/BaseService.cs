@@ -55,11 +55,14 @@ namespace Xakpc.Tjournal.Api.DAL
             return Task.Factory.StartNew(() => JsonConvert.DeserializeObject<T>(json));
         }
 
+        protected static string FormRequestUrl(string section)
+        {
+            return string.Format("{0}/{1}", Version, section);
+        }
+
         protected string FormRequestUrl(string section, string action)
         {
-            return string.IsNullOrEmpty(action)
-                ? string.Format("{0}/{1}", Version, section)
-                : string.Format("{0}/{1}/{2}", Version, section, action);
+            return string.Format("{0}/{1}/{2}", Version, section, action);
         }
 
         protected static void ValidateIntegerParam(string param, int value, int @from, int to)
