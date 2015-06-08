@@ -44,8 +44,10 @@
   <ItemGroup>
     <Compile Include="AccountServiceTests.cs" />
     <Compile Include="ClubServiceTests.cs" />
+    <Compile Include="NewsServiceTests.cs" />
     <Compile Include="PaperServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TweetsServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

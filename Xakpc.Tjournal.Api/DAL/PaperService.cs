@@ -9,45 +9,21 @@ namespace Xakpc.Tjournal.Api.DAL
 {
     internal class PaperService : BaseService, IPaperService
     {
-        public Task<IList<Paper>> GetPapersAsync()
-        {
-            return ExecuteRequest<IList<Paper>>(new RestRequest(FormRequestUrl("paper"), HttpMethod.Get));
-        }
-
-        public Task<IList<Paper>> GetPapersAsync(int count)
-        {
-            ValidateIntegerParam("count", count, 1, 50);
-
-            var request = new RestRequest(FormRequestUrl("paper"), HttpMethod.Get);
-
-            request.AddQueryParameter("count", count);
-
-            return ExecuteRequest<IList<Paper>>(request);
-        }
-
-        public Task<IList<Paper>> GetPapersAsync(int count, int offset)
+        public Task<IList<Paper>> GetPapersAsync(int count = 30, int offset = 0, SortPeriod period = SortPeriod.None)
         {
             ValidateIntegerParam("count", count, 1, 50);
             ValidateIntegerParam("offset", offset, 0, int.MaxValue);
 
             var request = new RestRequest(FormRequestUrl("paper"), HttpMethod.Get);
 
-            request.AddQueryParameter("count", count);
-            request.AddQueryParameter("offset", offset);
+            if (count != 30)
+                request.AddQueryParameter("count", count);
 
-            return ExecuteRequest<IList<Paper>>(request);
-        }
+            if (offset != 0)
+                request.AddQueryParameter("offset", offset);
 
-        public Task<IList<Paper>> GetPapersAsync(int count, int offset, SortPeriod period)
-        {
-            ValidateIntegerParam("count", count, 1, 50);
-            ValidateIntegerParam("offset", offset, 0, int.MaxValue);
-
-            var request = new RestRequest(FormRequestUrl("paper"), HttpMethod.Get);
-
-            request.AddQueryParameter("count", count);
-            request.AddQueryParameter("offset", offset);
-            request.AddQueryParameter("period", period.ToString().ToLower());
+            if (period != SortPeriod.None)
+                request.AddQueryParameter("period", period.ToString().ToLower());
 
             return ExecuteRequest<IList<Paper>>(request);
         }

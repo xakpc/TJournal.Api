@@ -18,5 +18,15 @@ namespace Xakpc.Tjournal.Api
         {
             return new ClubService();
         }
+
+        public static ITweetService GetTweetService()
+        {
+            return new TweetService();
+        }
+
+        public static INewsService GetNewsService()
+        {
+            return new NewsService();
+        }
     }
 }

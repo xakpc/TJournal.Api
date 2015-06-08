@@ -1,31 +1,122 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Xakpc.Tjournal.Api.Model.Paper">
-    <Position X="6" Y="3.75" Width="2.25" />
+    <Position X="6.75" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAEAAAAACAAQAAICQAgAAQAAAAAAAKAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Paper.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Xakpc.Tjournal.Api.Model.ClubPaper">
-    <Position X="6" Y="0.75" Width="2.25" />
+    <Position X="9.25" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AEAQAAAAAAAIAAAAAAAAAAAAAAAQQAACAAAAAAAAAIQ=</HashCode>
       <FileName>Model\ClubPaper.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Xakpc.Tjournal.Api.Model.Post">
-    <Position X="8.5" Y="0.75" Width="2.25" />
+  <Class Name="Xakpc.Tjournal.Api.Model.Post" Collapsed="true">
+    <Position X="9.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Post.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Xakpc.Tjournal.Api.Model.BasePaper">
-    <Position X="3" Y="1" Width="1.5" />
+    <Position X="8" Y="0.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAEAAgAACBAAAAAAAAAQJiAAAAAAACAA=</HashCode>
       <FileName>Model\BasePaper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.Author">
+    <Position X="0.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Model\Author.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.PaperAuthor">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\PaperAuthor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.Category">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Model\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.PaperCategory">
+    <Position X="0.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\PaperCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.SocialAccount" Collapsed="true">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAEAAAAAAAAAIAAACAAAAAAAAIA=</HashCode>
+      <FileName>Model\SocialAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.AccountInfo" Collapsed="true">
+    <Position X="12" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAEAAAAAAAAAAAAQAAAgAAAEBAAgAAAAAEAA=</HashCode>
+      <FileName>Model\AccountInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.Likes" Collapsed="true">
+    <Position X="13.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAQABAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Model\Likes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.Medium" Collapsed="true">
+    <Position X="15.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAACAAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAQAAA=</HashCode>
+      <FileName>Model\Medium.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.Rating" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Model\Rating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.InspiredAuthor">
+    <Position X="3.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAIAAAAAAgACQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\InspiredAuthor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.InspiredCategory">
+    <Position X="0.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\InspiredCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.InspiredPaper">
+    <Position X="6.75" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ARABQAAAABAgAgAAAAAAAAAgAAAAAAAAAQiAAAAAUAY=</HashCode>
+      <FileName>Model\InspiredPaper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Xakpc.Tjournal.Api.Model.BaseAuthor">
+    <Position X="2" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Model\BaseAuthor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

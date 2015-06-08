@@ -7,15 +7,8 @@ namespace Xakpc.Tjournal.Api
 {
     public interface IClubService
     {
-        Task<IList<ClubPaper>> GetClubPapersAsync();
-
-        Task<IList<ClubPaper>> GetClubPapersAsync(int count);
-
-        Task<IList<ClubPaper>> GetClubPapersAsync(int count, int offset);
-
-        Task<IList<ClubPaper>> GetClubPapersAsync(int count, int offset, ClubPaperCategory category);
-
-        Task<IList<ClubPaper>> GetClubPapersAsync(int count, int offset, ClubPaperCategory category, SortMode sortMode, SortModeAdditional sortModeAdditional);
+        Task<IList<ClubPaper>> GetClubPapersAsync(int count = 30, int offset = 0, ClubPaperCategory category = ClubPaperCategory.News, 
+            SortMode sortMode = SortMode.Recent, SortModeAdditional sortModeAdditional = SortModeAdditional.Day);
 
         /// <summary>
         /// Конкретная запись

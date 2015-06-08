@@ -13,32 +13,11 @@ namespace Xakpc.Tjournal.Api
         /// <summary>
         /// Статьи редакции
         /// </summary>
-        /// <returns></returns>
-        Task<IList<Paper>> GetPapersAsync();
-
-        /// <summary>
-        /// Статьи редакции
-        /// </summary>
-        /// <param name="count">количество</param>
-        /// <returns></returns>
-        Task<IList<Paper>> GetPapersAsync(int count);
-
-        /// <summary>
-        /// Статьи редакции
-        /// </summary>
-        /// <param name="count">количество</param>
-        /// <param name="offset">отступ от начала</param>
-        /// <returns></returns>
-        Task<IList<Paper>> GetPapersAsync(int count, int offset);
-
-        /// <summary>
-        /// Статьи редакции
-        /// </summary>
         /// <param name="count">количество</param>
         /// <param name="offset">отступ от начала</param>
         /// <param name="period">сортировка по популярности за период</param>
         /// <returns>Статьи редакции</returns>
-        Task<IList<Paper>> GetPapersAsync(int count, int offset, SortPeriod period);
+        Task<IList<Paper>> GetPapersAsync(int count = 30, int offset = 0, SortPeriod period = SortPeriod.None);
 
         /// <summary>
         /// Информация о статье
@@ -50,6 +29,7 @@ namespace Xakpc.Tjournal.Api
 
     public enum SortPeriod
     {
+        None,
         Month,
         Week
     }

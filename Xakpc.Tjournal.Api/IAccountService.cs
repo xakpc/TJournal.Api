@@ -8,8 +8,8 @@ namespace Xakpc.Tjournal.Api
     {
         Task<AccountInfo> GetAccountInfoAsync(int userId);
 
-        Task<IList<Post>> GetAccountPostsAsync(int userId);
-        Task<IList<Post>> GetAccountPostsAsync(int userId, int count);
-        Task<IList<Post>> GetAccountPostsAsync(int userId, int count, int offset);
+        //Task<IList<Post>> GetAccountPostsAsync(int userId);
+        //Task<IList<Post>> GetAccountPostsAsync(int userId, int count);
+        Task<IList<Post>> GetAccountPostsAsync(int userId, int count = 30, int offset = 0);
     }
 }

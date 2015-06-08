@@ -9,7 +9,7 @@ using Xakpc.Tjournal.Api.Model;
 
 namespace Xakpc.Tjournal.Api.DAL
 {
-    internal class BaseService
+    public class BaseService
     {
         private const string SchemaJson = @" 
             {
