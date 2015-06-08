@@ -7,7 +7,7 @@ using Xakpc.Tjournal.Api.Model;
 
 namespace Xakpc.Tjournal.Api.DAL
 {
-    public class AccountService : BaseService, IAccountService
+    internal class AccountService : BaseService, IAccountService
     {
         public Task<Model.AccountInfo> GetAccountInfoAsync(int userId)
         {

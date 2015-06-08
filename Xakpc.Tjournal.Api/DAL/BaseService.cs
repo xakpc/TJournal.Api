@@ -9,7 +9,7 @@ using Xakpc.Tjournal.Api.Model;
 
 namespace Xakpc.Tjournal.Api.DAL
 {
-    public class BaseService
+    internal class BaseService
     {
         private const string SchemaJson = @" 
             {
@@ -37,9 +37,9 @@ namespace Xakpc.Tjournal.Api.DAL
 
         protected async Task<T> ExecuteRequest<T>(RestRequest request)
         {
-            var response = await _client.Execute<T>(request).ConfigureAwait(false);
+            var response = await _client.Execute(request).ConfigureAwait(false);
 
-            //var content = Encoding.UTF8.GetString(response.RawBytes, 0, response.RawBytes.Length);
+            var content = Encoding.UTF8.GetString(response.RawBytes, 0, response.RawBytes.Length);
             //var jobj = JObject.Parse(content);
 
             //if (jobj.IsValid(_errorSchema))
@@ -47,7 +47,8 @@ namespace Xakpc.Tjournal.Api.DAL
             //    throw new InvalidRequestException(await DeserializeObjectAsync<Error>(content).ConfigureAwait(false));
             //}
 
-            return response.Data;
+            //return response.Data;
+            return await DeserializeObjectAsync<T>(content);
         }
 
         private static Task<T> DeserializeObjectAsync<T>(string json)

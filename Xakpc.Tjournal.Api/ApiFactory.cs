@@ -13,5 +13,10 @@ namespace Xakpc.Tjournal.Api
         {
             return new PaperService();
         }
+
+        public static IClubService GetClubService()
+        {
+            return new ClubService();
+        }
     }
 }

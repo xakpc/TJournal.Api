@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using Xakpc.Tjournal.Api.DAL;
 
 namespace Xakpc.Tjournal.Api.Model
 {
@@ -27,6 +28,7 @@ namespace Xakpc.Tjournal.Api.Model
         public string ExternalLinkDomain { get; set; }
 
         [JsonProperty("inspiredByThis")]
-        public bool InspiredByThis { get; set; }
+        //[JsonConverter(typeof (InspiredByThisJsonConverter))] 
+        public object InspiredByThis { get; set; } // TODO: добавить возможность конвертировать как Boolean так и Object
     }
 }

@@ -7,7 +7,7 @@ using Xakpc.Tjournal.Api.Model;
 
 namespace Xakpc.Tjournal.Api.DAL
 {
-    public class PaperService : BaseService, IPaperService
+    internal class PaperService : BaseService, IPaperService
     {
         public Task<IList<Paper>> GetPapersAsync()
         {
