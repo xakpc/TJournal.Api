@@ -46,11 +46,13 @@
     <Compile Include="DAL\AccountService.cs" />
     <Compile Include="DAL\ClubService.cs" />
     <Compile Include="DAL\InspiredByThisJsonConverter.cs" />
+    <Compile Include="DAL\MiscService.cs" />
     <Compile Include="DAL\NewsService.cs" />
     <Compile Include="DAL\PaperService.cs" />
     <Compile Include="DAL\TweetService.cs" />
     <Compile Include="IAccountService.cs" />
     <Compile Include="IClubService.cs" />
+    <Compile Include="IMiscService.cs" />
     <Compile Include="INewsService.cs" />
     <Compile Include="IPaperService.cs" />
     <Compile Include="ITweetService.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Model\Paper.cs" />
     <Compile Include="Model\PaperAuthor.cs" />
     <Compile Include="Model\PaperCategory.cs" />
+    <Compile Include="Model\PaperWrapper.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\Rating.cs" />
     <Compile Include="Model\SocialAccount.cs" />

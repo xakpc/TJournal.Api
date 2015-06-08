@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AccountServiceTests.cs" />
     <Compile Include="ClubServiceTests.cs" />
+    <Compile Include="MiscServiceTests.cs" />
     <Compile Include="NewsServiceTests.cs" />
     <Compile Include="PaperServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

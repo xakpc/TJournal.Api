@@ -28,5 +28,10 @@ namespace Xakpc.Tjournal.Api
         {
             return new NewsService();
         }
+
+        public static IMiscService GetMiscService()
+        {
+            return new MiscService();            
+        }
     }
 }

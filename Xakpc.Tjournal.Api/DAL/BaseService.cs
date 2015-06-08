@@ -35,11 +35,16 @@ namespace Xakpc.Tjournal.Api.DAL
             _errorSchema = JsonSchema.Parse(SchemaJson);
         }
 
+        protected Task ExecuteRequest(RestRequest request)
+        {
+            return _client.Execute(request);
+        }
+
         protected async Task<T> ExecuteRequest<T>(RestRequest request)
         {
-            var response = await _client.Execute(request).ConfigureAwait(false);
+            var response = await _client.Execute<T>(request).ConfigureAwait(false);
 
-            var content = Encoding.UTF8.GetString(response.RawBytes, 0, response.RawBytes.Length);
+            //var content = Encoding.UTF8.GetString(response.RawBytes, 0, response.RawBytes.Length);
             //var jobj = JObject.Parse(content);
 
             //if (jobj.IsValid(_errorSchema))
@@ -47,8 +52,8 @@ namespace Xakpc.Tjournal.Api.DAL
             //    throw new InvalidRequestException(await DeserializeObjectAsync<Error>(content).ConfigureAwait(false));
             //}
 
-            //return response.Data;
-            return await DeserializeObjectAsync<T>(content);
+            return response.Data;
+            //return await DeserializeObjectAsync<T>(content);
         }
 
         private static Task<T> DeserializeObjectAsync<T>(string json)
