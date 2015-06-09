@@ -17,23 +17,23 @@ namespace Xakpc.Tjournal.Api.Tests
         }
 
         [Test]
-        public async Task GetClubPapersAsync_Limit15_ReturnAtLeast15()
+        public async Task GetClubPapersAsync_Limit10_ReturnAtLeast10()
         {
             var api = ApiFactory.GetClubService();
 
-            var actual = await api.GetClubPapersAsync(15);
+            var actual = await api.GetClubPapersAsync(10);
 
-            Assert.That(actual, Has.Count.AtLeast(15));
+            Assert.That(actual, Has.Count.AtLeast(10));
         }
 
         [Test]
-        public async Task GetClubPapersAsync_Limit15Offset5_ReturnAtLeast15()
+        public async Task GetClubPapersAsync_Limit10Offset5_ReturnAtLeast10()
         {
             var api = ApiFactory.GetClubService();
 
-            var actual = await api.GetClubPapersAsync(15, 5);
+            var actual = await api.GetClubPapersAsync(10, 5);
 
-            Assert.That(actual, Has.Count.AtLeast(15));
+            Assert.That(actual, Has.Count.AtLeast(10));
         }
 
         [Test]
@@ -47,13 +47,13 @@ namespace Xakpc.Tjournal.Api.Tests
         }
 
         [Test]
-        public async Task GetClubPapersAsync_Limit15Offset5WithSort_ReturnAtLeast15()
+        public async Task GetClubPapersAsync_Limit10Offset3WithSort_ReturnAtLeast10()
         {
             var api = ApiFactory.GetClubService();
 
-            var actual = await api.GetClubPapersAsync(15, 5, ClubPaperCategory.News, SortMode.Discuss, SortModeAdditional.FourDays);
+            var actual = await api.GetClubPapersAsync(10, 3, ClubPaperCategory.News, SortMode.Discuss, SortModeAdditional.FourDays);
 
-            Assert.That(actual, Has.Count.AtLeast(15));
+            Assert.That(actual, Has.Count.AtLeast(10));
         }
 
 
